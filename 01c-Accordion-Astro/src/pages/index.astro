@@ -1,0 +1,27 @@
+---
+import "../styles/style.css";
+import "../components/Accordion.astro";
+import Accordion from "../components/Accordion.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Accordion Astro</title>
+  </head>
+  <body>
+    <header>
+      <h1>Accordion in Astro</h1>
+      <p>Accordion example in Astro</p>
+      <p>Using <em>details</em> HTML tag in an <em>components</em></p>
+    </header>
+    <main>
+      <Accordion title="Here's an Accordion">
+        <p>Not quite like in HTML</p>
+      </Accordion>
+    </main>
+  </body>
+</html>

@@ -1,19 +1,23 @@
-<!DOCTYPE html>
+---
+import "../styles/style.css";
+
+import ScrollIndicator from "../components/ScrollIndicator.astro";
+---
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scroll Indicator Simple</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Scroll Indicator Astro</title>
   </head>
   <body>
     <header>
-      <h1>Scroll Indicator Simple</h1>
-      <p>A simple scroll indicator in JavaScript</p>
+      <h1>Scroll Indicator in Astro</h1>
+      <p>A simple scroll indicator in Astro</p>
     </header>
-    <div class="scroll_container">
-      <div class="scroll_indicator"></div>
-    </div>
+    <ScrollIndicator />
     <main>
       <!-- Lots of content so we have something to scroll -->
       <h2>The Content</h2>
@@ -35,5 +39,4 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto modi pariatur ea sunt dicta aliquam aliquid. Optio aut iusto quos voluptatum numquam corporis voluptatibus porro, eius, architecto dolorum hic quidem?</p>
     </main>
   </body>
-  <script src="scripts.js"></script>
 </html>

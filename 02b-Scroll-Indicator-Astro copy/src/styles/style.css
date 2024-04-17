@@ -30,3 +30,12 @@ header {
 main {
   margin: 3rem 2rem;
 }
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section div {
+  width: 50%;
+}

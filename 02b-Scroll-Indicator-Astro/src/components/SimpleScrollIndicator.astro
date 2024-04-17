@@ -1,0 +1,30 @@
+---
+
+---
+
+<div class="simple_container">
+  <div class="simple_indicator"></div>
+</div>
+
+<script>
+  window.addEventListener("scroll", onScroll);
+
+  function onScroll() {
+    let scrolled = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolledfactor = scrolled / height;
+    document.querySelector(".simple_indicator").style.width = `${scrolledfactor * 100}%`;
+  }
+</script>
+<style>
+  .simple_container {
+    width: 100%;
+    height: 0.5rem;
+    background-color: lightgray;
+  }
+  .simple_indicator {
+    width: 0%;
+    height: 100%;
+    background-color: darkgray;
+  }
+</style>

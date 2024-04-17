@@ -1,34 +1,51 @@
 ---
-
+const { points } = Astro.props;
+console.log("points", points);
 ---
 
-<div class="scroll_container">
-  <div class="scroll_indicator"></div>
-</div>
+<scroll-indicator data-points={points}>
+  <div class="container">
+    <div class="indicator"></div>
+  </div>
+</scroll-indicator>
+<script>
+  class ScrollIndicator extends HTMLElement {
+    constructor() {
+      super();
 
+      const points = this.dataset.points.split(",");
+
+      window.addEventListener("scroll", onScroll);
+
+      function onScroll() {
+        let scrolled = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolledfactor = scrolled / height;
+        let indicatorPoint = 0.0;
+        let lastPoint = 1.0;
+        points.push(lastPoint);
+        points.forEach((point) => {
+          let indicatorDiff = Math.abs(indicatorPoint - scrolledfactor);
+          let pointDiff = Math.abs(point - scrolledfactor);
+          if (pointDiff < indicatorDiff) {
+            indicatorPoint = point;
+          }
+        });
+        document.querySelector(".indicator").style.width = `${indicatorPoint * 100}%`;
+      }
+    }
+  }
+  customElements.define("scroll-indicator", ScrollIndicator);
+</script>
 <style>
-  .scroll_container {
-    position: sticky;
-    top: 0;
+  .container {
     width: 100%;
     height: 0.5rem;
-    margin: 0 2rem;
     background-color: lightgray;
   }
-
-  .scroll_indicator {
+  .indicator {
     width: 0%;
     height: 100%;
     background-color: darkgray;
   }
 </style>
-<script>
-  window.addEventListener("scroll", onScroll);
-
-  function onScroll() {
-    var scrolled = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolledfactor = (scrolled / height) * 100;
-    document.querySelector(".scroll_indicator").style.width = `${scrolledfactor}%`;
-  }
-</script>

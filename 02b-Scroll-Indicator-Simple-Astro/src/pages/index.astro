@@ -18,22 +18,9 @@ import SimpleScrollIndicator from "../components/SimpleScrollIndicator.astro";
       <h1>Scroll Indicator in Astro</h1>
       <p>A simple scroll indicator in Astro</p>
     </header>
-    <div class="simple_scroll_indicator">
+    <div class="scroll_indicator">
       <SimpleScrollIndicator />
     </div>
-    <div class="scroll_indicator">
-      <ScrollIndicator points={[0.1, 0.4, 0.7]} />
-    </div>
-    <style>
-      .simple_scroll_indicator {
-        position: sticky;
-        top: 0;
-      }
-      .scroll_indicator {
-        position: sticky;
-        top: 0.5rem;
-      }
-    </style>
     <main>
       <!-- Lots of content so we have something to scroll -->
       <h2>The Content</h2>

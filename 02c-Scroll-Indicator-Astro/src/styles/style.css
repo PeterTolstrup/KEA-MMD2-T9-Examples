@@ -39,3 +39,8 @@ section {
 section div {
   width: 50%;
 }
+
+.scroll_indicator {
+  position: sticky;
+  top: 0;
+}

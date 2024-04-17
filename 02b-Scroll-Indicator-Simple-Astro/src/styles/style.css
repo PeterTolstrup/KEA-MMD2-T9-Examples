@@ -30,3 +30,8 @@ header {
 main {
   margin: 3rem 2rem;
 }
+
+.scroll_indicator {
+  position: sticky;
+  top: 0;
+}

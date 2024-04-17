@@ -1,0 +1,20 @@
+---
+const { background, height } = Astro.props;
+---
+
+<section>
+  <slot />
+</section>
+
+<style define:vars={{ background: `url("${background}")`, height: `${height}vh` }}>
+  section {
+    background-image: var(--background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    width: 100%;
+    height: var(--height);
+  }
+</style>

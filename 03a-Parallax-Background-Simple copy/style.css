@@ -70,3 +70,35 @@ section {
   background-color: white;
   padding: 3rem;
 }
+
+.second_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: gray;
+
+  height: 100vh;
+  overflow-y: auto;
+  transform-style: preserve-3d;
+  perspective: 10px;
+}
+
+.second_section div {
+  width: 50%;
+  background-color: white;
+  padding: 2rem;
+}
+
+.second_section div:nth-child(1) {
+  transform: translateZ(0.1px) scale(1.1);
+}
+
+.second_section div:nth-child(2) {
+  transform: translateZ(-1.5px) scale(1.3);
+}
+
+.second_section div:nth-child(3) {
+  transform: translateZ(-2px) scale(1.5);
+}

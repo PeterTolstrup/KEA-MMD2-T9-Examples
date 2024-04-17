@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+h2 {
+  margin-bottom: 1rem;
+}
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin-bottom: 0.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 75vh;
+
+  background-image: url("https://i.kym-cdn.com/photos/images/newsfeed/001/791/790/48d.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header div {
+  width: 50%;
+  background-color: white;
+  padding: 3rem;
+}
+
+main {
+  margin: 3rem 2rem;
+}
+
+section {
+  width: 100%;
+  height: 50vh;
+}
+
+.first_section {
+  background-image: url("./imgs/Firefly-evil-jedi-yelling-for-more-destruction-59773.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.first_section div {
+  background-color: white;
+  padding: 3rem;
+}

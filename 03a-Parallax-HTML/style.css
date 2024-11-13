@@ -80,7 +80,7 @@ section {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   height: 100vh;
@@ -93,7 +93,7 @@ section {
 }
 
 .third_section {
-  background-image: url("./imgs/Firefly-evil-jedi-yelling-for-more-destruction-66064.jpg");
+  background-image: url("./imgs/Firefly-evil-jedi-yelling-for-more-destruction-59774.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

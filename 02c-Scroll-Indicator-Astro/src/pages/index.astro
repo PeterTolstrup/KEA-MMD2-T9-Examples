@@ -16,20 +16,22 @@ import ScrollIndicator from "../components/ScrollIndicator.astro";
     <header>
       <h1>Scroll Indicator in Astro</h1>
       <p>A simple scroll indicator in Astro</p>
+      <a href="#content">Content</a>
+      <a href="#evenmore">Even More</a>
     </header>
     <div class="scroll_indicator">
-      <ScrollIndicator points="[0.1, 0.45, 0.65, 0.9]" />
+      <ScrollIndicator points="[0.1, 0.3, 0.65, 0.8]" />
     </div>
     <main>
       <!-- Lots of content so we have something to scroll -->
-      <section>
+      <section id="content">
         <div>
           <h2>The Content</h2>
           <p>Here's a lot of content so we have something to scroll</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus doloribus sint molestiae? Temporibus deserunt doloribus rerum tempore nam, labore aperiam asperiores illo dolores expedita ratione quo ipsam laboriosam nostrum dolor.</p>
         </div>
       </section>
-      <section>
+      <section id="evenmore">
         <div>
           <h3>Even more content</h3>
           <p>The more we have the better I guess</p>
